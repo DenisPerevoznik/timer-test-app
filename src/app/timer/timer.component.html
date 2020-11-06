@@ -1,0 +1,16 @@
+<div class="timer-block">
+  <h1>
+    {{ hours | number: "2.0" }}:{{ minutes | number: "2.0" }}:{{
+      seconds | number: "2.0"
+    }}
+  </h1>
+
+  <div class="buttons">
+    <button (click)="handleStart()" [disabled]="isEnable">Start</button>
+    <button (click)="handleStop()">Stop</button>
+    <button #waitBtn>Wait</button>
+    <button (click)="handleReset()">Reset</button>
+  </div>
+
+  <h2 id="ttt"></h2>
+</div>
